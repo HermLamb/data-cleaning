@@ -109,14 +109,12 @@ for(a in c("laying", "sitting", "standing", "walking", "walkingdownstairs",
            "walkingupstairs")) {
   df <- filter(data, activity == a)
   
-  
-  for(s in c(1:30)){
+   for(s in c(1:30)){
     datasubject <- filter(df, subject == s)
     df2 <- as.data.frame(t(colMeans(datasubject[,c(4:69)])))
     df2 <- cbind(datasubject[1,c(1:3)], df2)
     newdata <- rbind(newdata, df2)
   }
-  
 }
 
 # change names newdata
@@ -132,6 +130,6 @@ outdir <- 'tidy.data'
 dir.create( outdir, showWarnings = FALSE )
 
 ## write tidy data to files
-write.csv( data, "tidy.data/accellerometers_tidy.csv")
-write.csv( newdata, "tidy.data/accelerometers_averages.csv")
+write.csv( data, "tidy.data/accellerometers_tidy.csv", row.names = FALSE)
+write.csv( newdata, "tidy.data/accellerometers_averages.csv", row.names = FALSE)
 
