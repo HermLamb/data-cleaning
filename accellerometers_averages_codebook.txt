@@ -1,0 +1,94 @@
+Feature Selection 
+=================
+
+The features selected for this database come from the accelerometer and gyroscope 3-axial raw signals time.acceleration-XYZ and 
+time.orientation-XYZ. 
+These time domain signals were captured at a constant rate of 50 Hz. Then they were filtered using 
+a median filter and a 3rd order low pass Butterworth filter with a corner frequency of 20 Hz to remove noise. Similarly, the 
+acceleration signal was then separated into body and gravity acceleration signals (timeBody.acceleration-XYZ and timeGravity.acceleration-XYZ) using 
+another low pass Butterworth filter with a corner frequency of 0.3 Hz. 
+
+Subsequently, the body linear acceleration and angular velocity were derived in time to obtain Jerk signals (timeBody.acceleration.jerksignal-XYZ 
+and timeBody.orientation.jerksignal-XYZ). Also the magnitude of these three-dimensional signals were calculated using the Euclidean norm 
+(timeBody.accelleration.magnitude, timeGravity.accelleration.magnitude, timeBody.accelleration.jerksignal.magnitude, timeBody.orientation.magnitude, 
+timeBody.orientation.jerksignal.magnitude). 
+
+Finally a Fast Fourier Transform (FFT) was applied to some of these signals producing freqBody.acceleration-XYZ, freqBody.accelleration.jerksignal-XYZ, 
+freqBody.orientation-XYZ, freqBody.accelleration.jerksignal.magnitude, freqBody.orientation.magnitude, freqBody.orientation.jerksignal.magnitude. 
+
+These signals were used to estimate variables of the feature vector for each pattern:  
+'-XYZ' is used to denote 3-axial signals in the X, Y and Z directions.
+
+
+These are the variables in the dataset. All 'time' variables indicate time in seconds. All 'freq' variables indicate the 
+frequency in times/second. 
+
+1 "av_type": whether the subject was used in the 'train' or the 'test' group
+2 "av_activity": type of activity
+3 "av_subject": subject number
+4 "av_timeBody.accelleration.mean_X": 
+5 "av_timeBody.accelleration.mean_Y"
+6 "av_timeBody.accelleration.mean_Z"
+7 "av_timeBody.accelleration.std_X"
+8 "av_timeBody.accelleration.std_Y"
+9 "av_timeBody.accelleration.std_Z"
+10 "av_timeGravity.accelleration.mean_X"
+11 "av_timeGravity.accelleration.mean_Y"
+12 "av_timeGravity.accelleration.mean_Z"
+13 "av_timeGravity.accelleration.std_X"
+14 "av_timeGravity.accelleration.std_Y"
+15 "av_timeGravity.accelleration.std_Z"
+16 "av_timeBody.accelleration.jerksignal.mean_X"
+17 "av_timeBody.accelleration.jerksignal.mean_Y"
+18 "av_timeBody.accelleration.jerksignal.mean_Z"
+19 "av_timeBody.accelleration.jerksignal.std_X"
+20 "av_timeBody.accelleration.jerksignal.std_Y"
+21 "av_timeBody.accelleration.jerksignal.std_Z"
+22 "av_timeBody.orientation.mean_X"
+23 "av_timeBody.orientation.mean_Y"
+24 "av_timeBody.orientation.mean_Z"
+25 "av_timeBody.orientation.std_X"
+26 "av_timeBody.orientation.std_Y"
+27 "av_timeBody.orientation.std_Z"
+28 "av_timeBody.orientation.jerksignal.mean_X"
+29 "av_timeBody.orientation.jerksignal.mean_Y"
+30 "av_timeBody.orientation.jerksignal.mean_Z"
+31 "av_timeBody.orientation.jerksignal.std_X"
+32 "av_timeBody.orientation.jerksignal.std_Y"
+33 "av_timeBody.orientation.jerksignal.std_Z"
+34 "av_timeBody.accelleration.magnitude.mean_"
+35 "av_timeBody.accelleration.magnitude.std_"
+36 "av_timeGravity.accelleration.magnitude.mean_"
+37 "av_timeGravity.accelleration.magnitude.std_"
+38 "av_timeBody.accelleration.jerksignal.magnitude.mean_"
+39 "av_timeBody.accelleration.jerksignal.magnitude.std_"
+40 "av_timeBody.orientation.magnitude.mean_"
+41 "av_timeBody.orientation.magnitude.std_"
+42 "av_timeBody.orientation.jerksignal.magnitude.mean_"
+43 "av_timeBody.orientation.jerksignal.magnitude.std_"
+44 "av_freqBody.accelleration.mean_X"
+45 "av_freqBody.accelleration.mean_Y"
+46 "av_freqBody.accelleration.mean_Z"
+47 "av_freqBody.accelleration.std_X"
+48 "av_freqBody.accelleration.std_Y"
+49 "av_freqBody.accelleration.std_Z"
+50 "av_freqBody.accelleration.jerksignal.mean_X"
+51 "av_freqBody.accelleration.jerksignal.mean_Y"
+52 "av_freqBody.accelleration.jerksignal.mean_Z"
+53 "av_freqBody.accelleration.jerksignal.std_X"
+54 "av_freqBody.accelleration.jerksignal.std_Y"
+55 "av_freqBody.accelleration.jerksignal.std_Z"
+56 "av_freqBody.orientation.mean_X"
+"57" "av_freqBody.orientation.mean_Y"
+"58" "av_freqBody.orientation.mean_Z"
+"59" "av_freqBody.orientation.std_X"
+"60" "av_freqBody.orientation.std_Y"
+"61" "av_freqBody.orientation.std_Z"
+"62" "av_freqBody.accelleration.magnitude.mean_"
+"63" "av_freqBody.accelleration.magnitude.std_"
+"64" "av_freqBodyBody.accelleration.jerksignal.magnitude.mean_"
+"65" "av_freqBodyBody.accelleration.jerksignal.magnitude.std_"
+"66" "av_freqBodyBody.orientation.magnitude.mean_"
+"67" "av_freqBodyBody.orientation.magnitude.std_"
+
+
